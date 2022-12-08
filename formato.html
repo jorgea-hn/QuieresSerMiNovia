@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quieres ser mi Novia</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        function Si(){
+            respuesta1 = "Yo se que te quieres casar conmigo a mi no me engañas, Te amo";
+            respuesta2 = "Tu + yo = siempre juntitos";
+            document.getElementById("resultado").innerHTML = respuesta1;
+            document.getElementById("resultado1").innerHTML = respuesta2;
+
+            document.getElementById("btn1").style.visibility="hidden";
+            document.getElementById("btn2").style.visibility="hidden";
+        }
+
+        function No(){
+            ancho = window.innerWidth;
+            alto = window.innerHeight;
+            console.log(ancho)
+            console.log(alto)
+
+            x = (Math.random()*ancho)-100 + "px";
+            y = (Math.random()*alto)-50 + "px";
+
+            console.log(x)
+            console.log(y)
+
+            document.getElementById("btn2").style.position = "absolute";
+            document.getElementById("btn2").style.left = x;
+            document.getElementById("btn2").style.top = y;
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Quieres ser mi novia</h1>
+    <div>
+        <!-- <a id="btn1" onclick="Si()">Si</a> -->
+        <!-- <a id="btn2" onmouseover="No()">No</a> -->
+        <button id="btn1" onclick="Si()"><span>Si</span></button>
+        <button id="btn2" onmouseover="No()"><span>No</span></button>
+    </div>
+        
+    <p id="resultado"></p>
+    <p id="resultado1"></p>
+</body>
+</html>
